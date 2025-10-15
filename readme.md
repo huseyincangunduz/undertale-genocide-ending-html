@@ -11,6 +11,6 @@ https://huseyincangunduz.github.io/undertale-genocide-ending-html/
 
     - Chara from Undertale
     - Undertale game by Toby Fox
-    - "Determination Sans" font (i don't know who is publisher but PR)
+    - "Determination Sans" font (i don't know who is publisher but can be opened PR if there are)
 
 - Please feel free to contribution and send feedbacks
