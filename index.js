@@ -140,8 +140,8 @@ const endOfDamage = () => {
     setTimeout(() => {
         damageImgElement.classList.add("d-none");
         damageImgElement.classList.remove("d-block");
-        alert("Amına kodumun soykırımcısı seni!");
-        location.reload();
+        
+        location.href = "https://github.com/huseyincangunduz/undertale-genocide-ending-html";
     }, 2000)
 }
 
