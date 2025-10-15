@@ -1,0 +1,154 @@
+@font-face {
+    font-family: "Determination Sans";
+    src: url("assets/c5b8c461ca04a50802b51d83c0ef2ab0.woff");
+}
+
+
+@keyframes translate-shake {
+    0% {
+        transform: translate(-1px, 10%);
+    }
+
+    25% {
+        transform: translate(10%, -13%);
+    }
+
+    50% {
+        transform: translate(-10%, 8%);
+
+    }
+
+    75% {
+        transform: translate(12%, 11%);
+
+    }
+
+    100% {
+        transform: translate(9%, -15%);
+
+
+    }
+}
+
+@keyframes background-image-shake {
+    0% {
+        background-position: 60% 30%;
+    }
+
+    25% {
+        background-position: 52% 40%;
+    }
+
+    50% {
+        background-position: 60% 51%;
+    }
+
+    75% {
+        background-position: 48% 49%;
+    }
+
+    100% {
+        background-position: 51% 60%;
+    }
+}
+
+@keyframes jump-scare-background-red-black {
+    0% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+@keyframes jump-scare-character-scale {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(10);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.fullscr-frame {
+    background-color: black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 600px;
+    transform: translate(-50%, -50%);
+}
+
+.fullscr-frame.jump-scare {
+    width: 100vw;
+    height: 100vh;
+    animation: jump-scare-background-red-black 0.1s infinite alternate;
+}
+
+.damage {
+    animation: background-image-shake 0.5s infinite alternate;
+    width: 100dvw;
+    height: 100dvh;
+    background-image: url(assets/nine.png);
+    background-size: 100px auto;
+    background-repeat: repeat;
+
+}
+
+
+.chara {
+    height: 10vw;
+    width: 10vw;
+    background: url(assets/latest.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.chara.wide-eye {
+    background: url(assets/wide-eye.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.chara.jump-scare {
+    background: url(assets/jumpscare.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: jump-scare-character-scale 10s forwards, background-image-shake .1s both infinite;
+}
+
+.text {
+    font-family: "Determination Sans", Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    /* font-weight: bold; */
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 100px;
+    overflow: hidden;
+
+}
+
+.d-block {
+    display: block;
+}
+
+.d-none {
+    display: none;
+}
